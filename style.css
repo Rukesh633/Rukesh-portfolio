@@ -286,8 +286,8 @@ p {
 #services .service-item {
 	flex-basis: 80%;
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
+	align-items: center; /* Center items vertically */
+	justify-content: center; /* Center items horizontally */
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
@@ -313,9 +313,9 @@ p {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
-	align-items: center;
-	justify-content: center;
-	
+	align-items: center; /* Center icon vertically */
+	justify-content: center; /* Center icon horizontally */
+	display: flex; /* Ensure icon container behaves as flexbox */
 }
 #services .service-item h2 {
 	font-size: 2rem;
@@ -323,13 +323,30 @@ p {
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
+
+
 #services .service-item p {
 	color: white;
 	text-align: left;
 }
 /* End Services Section */
 
+/* End Services Section */
+
 /* Projects section */
+
+/* Projects Section */
+#projects .all-projects .project-item {
+    margin-bottom: 30px; /* Adjust the bottom margin as per your preference */
+}
+/* Projects Section */
+#projects .all-projects .project-item {
+    margin-bottom: 30px;
+    border-radius: 10px; /* Adjust the border radius as per your preference */
+    overflow: hidden; /* Ensure content inside doesn't overflow the curved border */
+}
+
+
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
@@ -639,37 +656,86 @@ p {
 	/* End About */
 
 	/* contact  */
-	#contact .contact {
-		flex-direction: column;
-		padding: 100px 0;
-		align-items: center;
-		justify-content: center;
-		min-width: 20vh;
-	}
-	#contact .contact-items {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 0;
-	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
-	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
-	}
-	#contact .contact-item .contact-info {
-		width: 100%;
-		text-align: left;
-		padding-left: 20px;
-	}
+	/* Updated CSS for Contact Section */
+#contact .contact {
+	flex-direction: column;
+	padding: 100px 0;
+	align-items: center;
+	justify-content: center;
+	min-width: 20vh;
+  }
+  
+  #contact .contact-items {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap; /* Added to allow items to wrap */
+	justify-content: space-evenly;
+	margin: 30px 0; /* Adjusted margin */
+  }
+  
+  #contact .contact-item {
+	width: 30%; /* Adjusted width */
+	margin: 10px; /* Adjusted margin */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+  }
+  
+  #contact .contact-item .icon {
+	height: 80px; /* Adjusted height */
+	width: 80px; /* Adjusted width */
+  }
+  
+  #contact .contact-item .icon img {
+	object-fit: contain;
+  }
+  
+  #contact .contact-item .contact-info {
+	width: 100%;
+	text-align: center; /* Adjusted alignment */
+	padding: 10px 0; /* Adjusted padding */
+  }
+  
+  /* Styling for Contact Form */
+  .contact-form {
+	width: 100%;
+	max-width: 600px; /* Adjusted maximum width */
+	margin-top: 30px;
+	padding: 20px;
+	background-color: #f9f9f9; /* Added background color */
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+  }
+  
+  .contact-form form {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  
+  .contact-form button {
+	padding: 10px 20px;
+	background-color: #29323c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+	background-color: #555;
+  }
+  
 	/* End contact  */
 }
 /* End Media Query For Tablet */
