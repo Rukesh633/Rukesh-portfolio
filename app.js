@@ -23,3 +23,28 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+
+  const templateParams = {
+    from_name: name,
+    from_phone: phone,
+    message: message
+  };
+
+  emailjs.send('service_vh2ojoe', 'template_84104f4', templateParams)
+    .then(function(response) {
+      alert('Message sent successfully!');
+      contactForm.reset();
+    }, function(error) {
+      alert('Failed to send message. Please try again.');
+    });
+});
+
