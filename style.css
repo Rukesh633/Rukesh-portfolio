@@ -1,14 +1,14 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap';
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
-}
+  }
 a {
 	text-decoration: none;
 }
@@ -473,44 +473,76 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 	width: 90%;
-}
-#contact .contact-items {
-	/* max-width: 400px; */
+  }
+  #contact .contact-items {
 	width: 100%;
-}
-#contact .contact-item {
-	width: 80%;
+  }
+  #contact .contact-item {
+	width: 100%;
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
-	padding: 30px;
-	margin: 30px;
+	margin: 30px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: 0.3s ease box-shadow;
-}
-#contact .contact-item:hover {
+  }
+  #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
-}
-#contact .icon {
+  }
+  #contact .icon {
 	width: 70px;
-	margin: 0 auto;
-	margin-bottom: 10px;
-}
-#contact .contact-info h1 {
+	margin: 0 auto 10px;
+  }
+  #contact .contact-info h1 {
 	font-size: 2.5rem;
 	font-weight: 500;
 	margin-bottom: 5px;
-}
-#contact .contact-info h2 {
+  }
+  #contact .contact-info h2 {
 	font-size: 1.3rem;
 	line-height: 2rem;
 	font-weight: 500;
-}
+  }
 /*End contact Section */
+
+/* Styling for Contact Form */
+.contact-form {
+	width: 100%;
+	max-width: 600px;
+	margin: 30px auto 0;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .contact-form form {
+	display: flex;
+	flex-direction: column;
+  }
+  .contact-form input,
+  .contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  .contact-form button {
+	padding: 10px 20px;
+	background-color: #29323c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  .contact-form button:hover {
+	background-color: #555;
+  }
 
 /* Footer */
 #footer {
@@ -587,7 +619,7 @@ p {
 /* End Keyframes */
 
 /* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.cta {
 		font-size: 2.5rem;
 		padding: 20px 60px;
@@ -655,94 +687,45 @@ p {
 	}
 	/* End About */
 
-	/* contact  */
-	/* Updated CSS for Contact Section */
-#contact .contact {
-	flex-direction: column;
-	padding: 100px 0;
-	align-items: center;
-	justify-content: center;
-	min-width: 20vh;
-  }
+	/* Contact Section */
+	#contact .contact {
+		padding: 80px 20px; /* Adjusted padding */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	  }
+	  #contact .contact-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 30px 0;
+	  }
+	  #contact .contact-item {
+		width: 45%; /* Adjusted width for responsiveness */
+		max-width: 300px; /* Added max-width for better control */
+		margin: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	  }
   
-  #contact .contact-items {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap; /* Added to allow items to wrap */
-	justify-content: space-evenly;
-	margin: 30px 0; /* Adjusted margin */
-  }
+	  #contact .contact-item .icon {
+		height: 60px; /* Adjusted height */
+		width: 60px; /* Adjusted width */
+		margin-bottom: 10px; /* Added margin */
+	  }
   
-  #contact .contact-item {
-	width: 30%; /* Adjusted width */
-	margin: 10px; /* Adjusted margin */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-  }
-  
-  #contact .contact-item .icon {
-	height: 80px; /* Adjusted height */
-	width: 80px; /* Adjusted width */
-  }
-  
-  #contact .contact-item .icon img {
-	object-fit: contain;
-  }
-  
-  #contact .contact-item .contact-info {
-	width: 100%;
-	text-align: center; /* Adjusted alignment */
-	padding: 10px 0; /* Adjusted padding */
-  }
-  
-  /* Styling for Contact Form */
-  .contact-form {
-	width: 100%;
-	max-width: 600px; /* Adjusted maximum width */
-	margin-top: 30px;
-	padding: 20px;
-	background-color: #f9f9f9; /* Added background color */
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
-  }
-  
-  .contact-form form {
-	display: flex;
-	flex-direction: column;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-	width: 100%;
-	padding: 10px;
-	margin: 10px 0;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-  }
-  
-  .contact-form button {
-	padding: 10px 20px;
-	background-color: #29323c;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-	background-color: #555;
-  }
-  
-	/* End contact  */
-}
-/* End Media Query For Tablet */
-
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-	/* header */
+	  #contact .contact-item .icon img {
+		object-fit: contain;
+	  }
+	  #contact .contact-item .contact-info {
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+	  }
+	  /* header */
 	#header .hamburger {
 		display: none;
 	}
@@ -768,5 +751,47 @@ p {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
-}
+  
+  
+  
+  
+  }
+  
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+
 /* End  Media Query For Desktop */
+
+@media only screen and (max-width: 768px) {
+    #contact .contact {
+        padding: 40px 10px; /* Reduced padding for smaller screens */
+      }
+	  #contact .contact-items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	  #contact .contact-item {
+		width: 80%; /* Adjusted width for responsiveness */
+		max-width: 300px; /* Added max-width for better control */
+		margin: 20px auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	  }
+	  #contact .contact-item .icon {
+		height: 60px; /* Adjusted height */
+		width: 60px; /* Adjusted width */
+		margin-bottom: 10px; /* Added margin */
+		border-radius: 20%; /* Added border-radius */
+		border: 2px solid #ccc; /* Added border */
+	  }
+	
+	  #contact .contact-item .icon img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+	  }
+    }
