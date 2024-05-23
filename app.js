@@ -8,6 +8,11 @@ hamburger.addEventListener('click', () => {
 	mobile_menu.classList.toggle('active');
 });
 
+
+
+
+
+
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	if (scroll_position > 250) {
