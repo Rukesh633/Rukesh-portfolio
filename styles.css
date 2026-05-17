@@ -932,7 +932,7 @@ nav {
   .nav-hamburger { display: flex; }
   .mobile-menu { display: flex; }
   #hero {
-    min-height: 100svh; display: flex;
+    min-height: 100dvh; display: flex;
     flex-direction: column; align-items: flex-start; justify-content: flex-end;
   }
   .hero-content { width: 100%; position: relative; z-index: 5; padding: 0 1.5rem 5rem; }
