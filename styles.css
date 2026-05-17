@@ -222,7 +222,7 @@ nav.scrolled {
 
 .hero-photo-wrap {
   position: absolute; right: 8%; bottom: 2px;
-  width: clamp(320px, 36vw, 540px); height: 90%;
+  width: clamp(320px, 36vw, 540px); height: 100%;
   will-change: transform; z-index: 2;
 }
 .hero-photo-wrap img {
