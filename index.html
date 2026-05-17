@@ -1,277 +1,448 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>My Website</title>
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rukesh Boddeti — Frontend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>R</span>ukesh <span>B</span>oddeti</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
 
+<div id="cur"></div>
+<div id="cur-r"></div>
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Rukesh Boddeti<span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
-
-  <!-- Service Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>As a versatile Computer Science and Engineering graduate, I offer a comprehensive skill set that spans both
-          technical and creative realms. With a knack for problem-solving and innovation, I specialize in : </p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><img src="img/Web-design.jpg" /></div>
-          <h2>Web Design</h2>
-          <p>I blend creativity with functionality to deliver visually stunning and user-centric websites. I craft
-            responsive and intuitive interfaces. I prioritize user experience, ensuring your website not only looks
-            appealing but also engages visitors effectively.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img
-              src="https://previews.123rf.com/images/pikepicture/pikepicture2008/pikepicture200801771/153927999-ux-ui-design-icon-vector-ux-ui-design-sign-color-symbol-illustration.jpg"/>
-          </div>
-          <h2>UI/UX Designing</h2>
-          <p>I'm specialize in creating seamless and visually engaging experiences for your digital products. With a
-            keen eye for user interface aesthetics and a focus on enhancing user journeys, I ensure your applications
-            are both intuitive and visually appealing. </p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img
-              src="https://cdn3.vectorstock.com/i/1000x1000/95/32/front-end-developer-icon-outline-vector-32839532.jpg" />
-          </div>
-          <h2>Front-End Development</h2>
-          <p>I transform design concepts into responsive and interactive digital experiences. Proficient in HTML, CSS, JavaScript, and ReactJS, I build user-friendly websites and optimize the user experience across various devices</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://st2.depositphotos.com/1005920/5608/i/450/depositphotos_56088247-stock-photo-seo-red-flat-icon-isolated.jpg" /></div>
-          <h2>SEO Optimization</h2>
-          <p> 
-            I specialize in enhancing your website's visibility through comprehensive SEO optimization. From on-page SEO to keyword research, I ensure your content ranks higher. With a strategic approach, I drive organic traffic and boost your online presence.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Service Section -->
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>UI Designs</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 1 <a href="https://www.figma.com/community/file/1325788113643212716/health-dashboard" target="_blank"><span style="font-size: 0.8em;">🔗</span></a></h1>
-            <h2>Health Dashboard</h2>
-            <p>This meticulously designed dashboard empowers you to monitor and optimize key vital signs seamlessly. From real-time blood pressure and heart rate tracking to body temperature, blood sugar, and respiratory rate analysis</p>
-          </div>
-          <div class="project-img">
-            <a href="https://www.figma.com/community/file/1325788113643212716/health-dashboard" target="_blank">
-              <img src="img/Dashboard 1.1.png" alt="Dashboard Image">
-            </a>
-          </div>
-        </div>
-        
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 2<a href="https://www.figma.com/community/file/1325164705000240758/ev-cycles" target="_blank"><span style="font-size: 0.8em;">🔗</span></a></h1>
-            <h2>EV cycles</h2>
-            <p>Immerse yourself in the future of electric mobility with our meticulously crafted Electric Vehicle (EV)
-              landing page, meticulously designed using Figma. Our visually stunning layout captures the essence of
-              sustainable transportation, blending modern aesthetics with user-friendly navigation</p>
-          </div>
-          <div class="project-img">
-            <img src="img/EV cycle 1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 3<a href="https://www.figma.com/community/file/1324696588300664016/harley-davidson" target="_blank"><span style="font-size: 0.8em;">🔗</span></a></h1>
-            <h2>Harley Davidson Bike</h2>
-            <p>Featuring a minimalist yet impactful layout, the UI showcases high-quality images of Harley Davidson
-              bikes against a backdrop of classic black and chrome elements. The simplicity of the design ensures an
-              immediate connection with the brand's timeless aesthetic.</p>
-          </div>
-          <div class="project-img">
-            <img src="img/HD.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 4<a href="https://www.figma.com/community/file/1324812208076333397/bmw-landing-page" target="_blank"><span style="font-size: 0.8em;">🔗</span></a></h1>
-            <h2>BMW car</h2>
-            <p>where sophistication meets simplicity in a minimalist UI design. Immerse yourself in the epitome of
-              automotive excellence with a clean layout that highlights the entire BMW lineup. Our visually appealing
-              interface showcases the beauty of each BMW model through high-quality imagery and subtle design elements
-            </p>
-          </div>
-          <div class="project-img">
-            <img src="img/BMW 1.png" alt="img">
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 5<a href="https://www.figma.com/community/file/1334845551401335358/rr-anime-landing-page" target="_blank"><span style="font-size: 0.8em;">🔗</span></a></h1>
-            <h2>Anime Landing page</h2>
-            <p>Dive into the enchanting world of anime with our captivating landing page design. 
-              Explore diverse genres, vibrant characters, and immersive visuals in just a click. 
-              Whether you're a seasoned fan or new to anime, let our page be your gateway to endless entertainment and discovery!
-            </p>
-          </div>
-          <div class="project-img">
-            <img src="img/anime.png" alt="img">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Projects Section -->
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="img/rukesh .jpg" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>UI/UX Designer</h2>
-        <p>Hello! 👋 I'm Rukesh, a seasoned UI/UX designer with a strong background in graphic design. I specialize in
-          translating complex requirements into intuitive, user-centered solutions, mastering wireframing, and creating
-          interactive prototypes.My perpetual learning mindset keeps me at the forefront of design innovation, and armed
-          with a B.Tech in
-          Computer Science, I'm eager to contribute my skills, including web development expertise in HTML, CSS, and
-          JavaScript, to elevate your projects.
-        </p>
-        <a href="https://drive.google.com/file/d/1QRMRM-oBmdGb0-KIpiQOlNRLJaQVKiEQ/view?usp=sharing"
-          class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://st4.depositphotos.com/21557188/23281/v/450/depositphotos_232812454-stock-illustration-send-mail-icon-sms-line.jpg" style="border-radius: 20%; border: 2px solid #ccc;" alt="Send Mail Icon"/></div>
-          <div class="contact-info">
-            <h1>Mail</h1>
-            <h2></h2>
-          </div>
-        </div>
-        <div class="contact-form">
-          <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="text" id="mailid" name="mailid" placeholder="Your Email-Id" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta">Submit</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  <!-- End Contact Section -->
-
-
-  
-<!-- My Figma Community Account -->
-<div style="text-align: center;">
-  <p><strong style="color: #333333; font-size: 20px;">Connect on Figma</strong></p>
-  <p>Join me on Figma to see my latest design projects, prototypes, and UI/UX experiments.</p>
-  <p>Follow my work, leave feedback, and get inspired by a variety of creative solutions.</p>
-  <p><a href="https://www.figma.com/@rukeshraj" target="_blank" style="color: blue;">Visit my Figma Community Profile</a></p>
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-name"><span>RUKESH</span></div>
+  <div class="ld-line"></div>
+  <div class="ld-sub">Frontend Engineer · TCS · ICICI iLens</div>
 </div>
 
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">R<span>.</span>R</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#showcase">Design</a>
+    <a href="rukesh.html" class="menu-link menu-resume">Resume ↗</a>
+    <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-icon theme-icon--moon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </span>
+      <span class="theme-icon theme-icon--sun">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </span>
+    </button> -->
+    <a href="mailto:rukeshraj.boddeti@gmail.com" class="nav-cta">Let's Connect</a>
+  </div>
+</nav>
 
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>R</span>ukesh <span>B</span>oddeti</h1>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="menu-link">About</a>
+  <a href="#projects" class="menu-link">Work</a>
+  <a href="#skills" class="menu-link">Skills</a>
+  <a href="#showcase" class="menu-link">Design</a>
+  <a href="rukesh.html" class="menu-link menu-resume">Resume ↗</a>
+  <a href="mailto:rukeshraj.boddeti@gmail.com" class="nav-cta">Let's Connect</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-parallax-bg" id="heroBg">
+    <div class="hero-bg-gradient"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="hero-ring" id="heroRing"></div>
+
+  <div class="hero-photo-wrap" id="heroPhoto">
+    <img src="assets/Rukesh.png" alt="Rukesh Boddeti">
+  </div>
+
+  <div class="hero-content" id="heroText">
+    <div class="hero-eyebrow">
+      <span class="tcs-badge">● Currently at TCS</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-title-line"><span>RUKESH</span></span>
+      <span class="hero-title-line"><span>BODDETI</span></span>
+    </h1>
+    <p class="hero-tagline">Frontend Engineer</p>
+    <p class="hero-desc">I build precise, performant interfaces — where engineering depth meets design intention.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-gold">Explore Work</a>
+      <a href="mailto:rukeshraj.boddeti@gmail.com" class="btn-ghost">Let's Connect</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">1<span>+</span></div>
+      <div class="stat-label">Years Exp.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12<span>+</span></div>
+      <div class="stat-label">Projects</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">8<span>+</span></div>
+      <div class="stat-label">Tech Stack</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">Angular <span class="marquee-dot"></span> React <span class="marquee-dot"></span> Next.js <span class="marquee-dot"></span> TypeScript <span class="marquee-dot"></span> Figma <span class="marquee-dot"></span> Spring Boot <span class="marquee-dot"></span> MongoDB <span class="marquee-dot"></span> UI/UX Design <span class="marquee-dot"></span> Full-Stack Dev <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Angular <span class="marquee-dot"></span> React <span class="marquee-dot"></span> Next.js <span class="marquee-dot"></span> TypeScript <span class="marquee-dot"></span> Figma <span class="marquee-dot"></span> Spring Boot <span class="marquee-dot"></span> MongoDB <span class="marquee-dot"></span> UI/UX Design <span class="marquee-dot"></span> Full-Stack Dev <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="about-text">
+    <div class="sec-eyebrow reveal">01 / About</div>
+    <h2 class="sec-title reveal d1">Who I Am</h2>
+    <p class="about-body reveal d2">
+      Frontend Engineer at <strong>Tata Consultancy Services</strong>, building production interfaces for ICICI's loan processing platform. I bring engineering depth and design understanding together — not as a hybrid, but as a deliberate practice.<br><br>
+      I write clean Angular, think in component systems, and care about the details that separate functional from exceptional. Currently focused on <strong>frontend architecture, scalable UI patterns, and performance.</strong>
+    </p>
+    <div class="about-highlights reveal d3">
+      <div class="ah-item">
+        <span class="ah-label">Current Role</span>
+        <span class="ah-val">Frontend Dev · TCS</span>
       </div>
+      <div class="ah-item">
+        <span class="ah-label">Focus</span>
+        <span class="ah-val">Angular · React · UI/UX</span>
+      </div>
+      <div class="ah-item">
+        <span class="ah-label">Education</span>
+        <span class="ah-val">B.Tech · CS · 2024</span>
+      </div>
+      <div class="ah-item">
+        <span class="ah-label">Location</span>
+        <span class="ah-val ah-val--accent">India · Open to Remote</span>
+      </div>
+    </div>
+  </div>
 
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="https://www.facebook.com/rukesh.rukee.3/"><img
-              src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+  <div class="about-right">
+    <div class="exp-cards">
+      <div class="exp-card exp-card--active reveal">
+        <div class="exp-top">
+          <div class="exp-role">Frontend Developer <span class="exp-badge">● Now</span></div>
+          <div class="exp-period">Jul 2025 – Present</div>
         </div>
-        <div class="social-item">
-          <a href="https://www.instagram.com/rukesh_0633/"><img
-              src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        <div class="exp-company">Tata Consultancy Services · ICICI iLens</div>
+        <div class="exp-desc">Developing and maintaining frontend modules for ICICI iLens using Angular & TypeScript. Implementing client enhancements, UI modifications, and business requirement changes across multiple loan processing modules. Fixing bugs, integrating APIs, and collaborating in an Agile environment.</div>
+      </div>
+      <div class="exp-card reveal d1">
+        <div class="exp-top">
+          <div class="exp-role">UI Designer</div>
+          <div class="exp-period">Sep 2023 – Jan 2024</div>
         </div>
-        <div class="social-item">
-          <a href="https://dribbble.com/RukeshRaj"><img
-              src="https://img.icons8.com/bubbles/100/000000/dribbble.png" /></a>
+        <div class="exp-company">Freelance · Remote</div>
+        <div class="exp-desc">Collaborated with clients to align designs with business goals. Applied color theory, typography, and layout principles. Conducted user research and usability testing. Delivered wireframes, prototypes, and high-fidelity mockups using Figma and Adobe XD across multiple projects.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec sec--surface">
+  <div class="sec-eyebrow reveal">02 / Projects</div>
+  <h2 class="sec-title reveal d1">Selected Work</h2>
+
+  <div class="proj-grid">
+
+    <!-- Featured card with case study -->
+    <div class="proj-card proj-card--featured reveal">
+      <div class="proj-card-inner">
+        <div class="proj-meta">
+          <span class="proj-num">001</span>
+          <span class="proj-badge">Featured</span>
         </div>
-        <div class="social-item">
-          <a href="https://www.behance.net/rukesh20531"><img
-              src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+        <div class="proj-title">RR Career AI</div>
+        <p class="proj-desc">AI-powered career guidance platform with risk analysis, skill gap detection, and personalized learning roadmaps.</p>
+
+        <div class="case-study">
+          <div class="cs-row">
+            <div class="cs-block">
+              <span class="cs-label">Challenge</span>
+              <span class="cs-text">Career transitions lack structured, data-driven guidance — users rely on guesswork.</span>
+            </div>
+            <div class="cs-block">
+              <span class="cs-label">Approach</span>
+              <span class="cs-text">Angular component architecture with lazy-loaded AI modules and real-time REST API integration.</span>
+            </div>
+            <div class="cs-block">
+              <span class="cs-label">Outcome</span>
+              <span class="cs-text">Personalized roadmaps reducing career decision friction through intelligent, contextual data.</span>
+            </div>
+          </div>
         </div>
-        <div class="social-item" >
-          <a href="https://www.linkedin.com/in/rukesh-boddeti/"><img
-              src="https://img.icons8.com/bubbles/100/000000/linkedin.png" /></a>
+
+        <div class="proj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">AI</span>
+            <span class="proj-tag">Angular</span>
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">REST API</span>
+          </div>
+          <a href="https://rr-career-ai.vercel.app/" target="_blank" class="proj-arrow">↗</a>
         </div>
       </div>
     </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init("0PyN_VuCcEoRvrwQH"); 
-  })();
-</script>
 
-  
+    <div class="proj-card reveal">
+      <div class="proj-card-inner">
+        <div class="proj-meta">
+          <span class="proj-num">002</span>
+        </div>
+        <div class="proj-title">Trip Thrive AI</div>
+        <p class="proj-desc">AI-based trip planner delivering personalized itinerary recommendations based on destination, budget, and duration.</p>
+
+        <div class="case-study case-study--compact">
+          <div class="cs-block">
+            <span class="cs-label">Architecture</span>
+            <span class="cs-text">React with API-driven itinerary generation and dynamic state management for multi-step planning flows.</span>
+          </div>
+        </div>
+
+        <div class="proj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">AI</span>
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/Rukesh633/Trip-Thrive" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal d1">
+      <div class="proj-card-inner">
+        <div class="proj-meta">
+          <span class="proj-num">003</span>
+        </div>
+        <div class="proj-title">Employee Resource Mgmt</div>
+        <p class="proj-desc">Full-stack web app for employee management, project allocation, attendance tracking, and reporting with authentication.</p>
+
+        <div class="case-study case-study--compact">
+          <div class="cs-block">
+            <span class="cs-label">Frontend Architecture</span>
+            <span class="cs-text">Angular modular structure with role-based UI, audit logging, and Spring Boot REST backend.</span>
+          </div>
+        </div>
+
+        <div class="proj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">Spring Boot</span>
+            <span class="proj-tag">Angular</span>
+            <span class="proj-tag">MongoDB</span>
+          </div>
+          <a href="https://github.com/Rukesh633/" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal d2">
+      <div class="proj-card-inner">
+        <div class="proj-meta">
+          <span class="proj-num">004</span>
+        </div>
+        <div class="proj-title">Book Trekker</div>
+        <p class="proj-desc">Online bookstore with a user-friendly interface and seamless browsing experience. Built collaboratively with a team of four.</p>
+
+        <div class="case-study case-study--compact">
+          <div class="cs-block">
+            <span class="cs-label">UX Focus</span>
+            <span class="cs-text">Intuitive navigation and discovery patterns — optimized for minimal cognitive load.</span>
+          </div>
+        </div>
+
+        <div class="proj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">HTML/CSS</span>
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">UI Design</span>
+          </div>
+          <a href="https://github.com/Rukesh633/" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="sec">
+  <div class="sec-eyebrow reveal">03 / Skills</div>
+  <h2 class="sec-title reveal d1">What I<br>Work With</h2>
+
+  <div class="skills-layout">
+    <div class="skill-bars bars-section reveal d2">
+      <div class="skill-bar-item">
+        <div class="sb-top"><span class="sb-name">UI/UX Design (Figma)</span><span class="sb-pct">92%</span></div>
+        <div class="sb-track"><div class="sb-fill" style="--w:92%"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="sb-top"><span class="sb-name">Angular / React</span><span class="sb-pct">88%</span></div>
+        <div class="sb-track"><div class="sb-fill" style="--w:88%"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="sb-top"><span class="sb-name">TypeScript / JavaScript</span><span class="sb-pct">85%</span></div>
+        <div class="sb-track"><div class="sb-fill" style="--w:85%"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="sb-top"><span class="sb-name">Spring Boot / Java</span><span class="sb-pct">80%</span></div>
+        <div class="sb-track"><div class="sb-fill" style="--w:80%"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="sb-top"><span class="sb-name">MongoDB / SQL</span><span class="sb-pct">75%</span></div>
+        <div class="sb-track"><div class="sb-fill" style="--w:75%"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="sb-top"><span class="sb-name">Next.js / Tailwind</span><span class="sb-pct">78%</span></div>
+        <div class="sb-track"><div class="sb-fill" style="--w:78%"></div></div>
+      </div>
+    </div>
+
+    <div class="tech-grid reveal d3">
+      <div class="tech-item tech-item--primary">Angular</div>
+      <div class="tech-item tech-item--primary">React</div>
+      <div class="tech-item tech-item--primary">TypeScript</div>
+      <div class="tech-item tech-item--primary">Figma</div>
+      <div class="tech-item tech-item--primary">JavaScript</div>
+      <div class="tech-item tech-item--primary">Next.js</div>
+      <div class="tech-item">Spring Boot</div>
+      <div class="tech-item">MongoDB</div>
+      <div class="tech-item">REST APIs</div>
+      <div class="tech-item">Tailwind</div>
+      <div class="tech-item">Git</div>
+      <div class="tech-item">Adobe XD</div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN SHOWCASE — Signature cinematic scroll experience -->
+<section id="showcase" class="sec sec--dark">
+
+  <div class="sec-eyebrow reveal">04 / Design</div>
+
+  <h2 class="sec-title reveal d1">Design Explorations</h2>
+
+  <p class="showcase-intro reveal d2">
+    Beyond frontend engineering, I occasionally explore interface systems,
+    visual directions, and interaction concepts in Figma.
+  </p>
+
+  <div class="design-list">
+
+    <a href="https://www.figma.com/community/file/1324696588300664016/harley-davidson" target="_blank"
+      class="design-item reveal d2">
+
+      <div class="design-left">
+        <div class="design-name">Harley Davidson</div>
+        <div class="design-meta">Automotive · Minimal Design · Figma</div>
+      </div>
+
+      <div class="design-arrow">↗</div>
+
+    </a>
+    
+    <a href="https://www.figma.com/community/file/1325788113643212716/health-dashboard" target="_blank"
+      class="design-item reveal">
+
+      <div class="design-left">
+        <div class="design-name">Health Dashboard</div>
+        <div class="design-meta">Healthcare · Data UI · Figma</div>
+      </div>
+
+      <div class="design-arrow">↗</div>
+
+    </a>
+
+    <a href="https://www.figma.com/community/file/1325164705000240758/ev-cycles" target="_blank"
+      class="design-item reveal d1">
+
+      <div class="design-left">
+        <div class="design-name">EV Cycles</div>
+        <div class="design-meta">Mobility · Futuristic UI · Figma</div>
+      </div>
+
+      <div class="design-arrow">↗</div>
+
+    </a>
+
+    <a href="https://www.figma.com/community/file/1324812208076333397/bmw-landing-page" target="_blank"
+      class="design-item reveal d3">
+
+      <div class="design-left">
+        <div class="design-name">BMW Landing</div>
+        <div class="design-meta">Automotive · Editorial UI · Figma</div>
+      </div>
+
+      <div class="design-arrow">↗</div>
+
+    </a>
+
+    <a href="https://www.figma.com/community/file/1334845551401335358/rr-anime-landing-page" target="_blank"
+      class="design-item reveal d4">
+
+      <div class="design-left">
+        <div class="design-name">Anime Landing</div>
+        <div class="design-meta">Entertainment · Experimental UI · Figma</div>
+      </div>
+
+      <div class="design-arrow">↗</div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="sec--surface">
+  <div class="contact-inner">
+    <div class="contact-eyebrow reveal">Open to opportunities</div>
+    <h2 class="contact-title reveal d1">Let's<br><span class="outline">Create</span><br>Something</h2>
+    <p class="contact-sub reveal d2">Available for roles, collaborations, and conversations. If you're building something that demands engineering precision and design vision — reach out.</p>
+    <a href="mailto:rukeshraj.boddeti@gmail.com" class="contact-email reveal d3">rukeshraj.boddeti@gmail.com</a>
+    <div class="contact-links reveal d4">
+      <a href="https://www.linkedin.com/in/rukesh-boddeti/" class="contact-link" target="_blank">LinkedIn</a>
+      <span class="contact-sep">·</span>
+      <a href="https://github.com/rukesh633" class="contact-link" target="_blank">GitHub</a>
+      <span class="contact-sep">·</span>
+      <a href="https://dribbble.com/RukeshRaj" class="contact-link" target="_blank">Dribbble</a>
+      <span class="contact-sep">·</span>
+      <a href="https://www.figma.com/@rukeshraj" class="contact-link" target="_blank">Figma</a>
+      <span class="contact-sep">·</span>
+      <a href="tel:+918008896828" class="contact-link">+91 8008896828</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Rukesh Boddeti</div>
+  <div class="footer-copy">© 2025 · All Rights Reserved</div>
+  <a href="#" class="footer-top">↑ Top</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>

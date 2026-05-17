@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Rukesh Boddeti — Resume</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ───────────────── ROOT ───────────────── */
+
+:root{
+  --bg:#080808;
+  --surface:#111111;
+  --card:#121212;
+  --white:#f0ede8;
+  --muted:rgba(240,237,232,0.58);
+  --soft:rgba(240,237,232,0.28);
+  --border:rgba(255,255,255,0.06);
+
+  --gold:#c9a96e;
+  --gold-soft:rgba(201,169,110,0.12);
+
+  --radius:22px;
+
+  --container:1240px;
+}
+
+/* ───────────────── RESET ───────────────── */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+
+  font-family:'Syne',sans-serif;
+
+  overflow-x:hidden;
+}
+
+/* subtle grain */
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+
+  pointer-events:none;
+
+  opacity:.03;
+
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  z-index:9999;
+}
+
+/* ───────────────── UTILITIES ───────────────── */
+
+.container{
+  width:min(var(--container), calc(100% - 3rem));
+  margin:auto;
+}
+
+.sec{
+  padding:8rem 0;
+}
+
+.eyebrow{
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.62rem;
+
+  letter-spacing:.32em;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  margin-bottom:1.2rem;
+}
+
+.section-title{
+  font-family:'Bebas Neue',sans-serif;
+
+  font-size:clamp(3rem,8vw,5rem);
+
+  line-height:.95;
+
+  letter-spacing:.03em;
+
+  margin-bottom:2rem;
+}
+
+/* ───────────────── NAV ───────────────── */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:1000;
+
+  backdrop-filter:blur(18px);
+
+  background:rgba(8,8,8,.72);
+
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+
+.nav-inner{
+  width:min(var(--container), calc(100% - 3rem));
+
+  margin:auto;
+
+  height:82px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:'Bebas Neue',sans-serif;
+
+  font-size:1.4rem;
+
+  letter-spacing:.12em;
+
+  color:var(--white);
+
+  text-decoration:none;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.nav-link{
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.62rem;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+
+  text-decoration:none;
+
+  color:var(--muted);
+
+  transition:color .25s ease;
+}
+
+.nav-link:hover{
+  color:var(--white);
+}
+
+.nav-btn{
+  padding:.9rem 1.6rem;
+
+  border-radius:999px;
+
+  background:var(--gold);
+
+  color:#080808;
+
+  text-decoration:none;
+
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.62rem;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+
+  font-weight:700;
+}
+
+/* ───────────────── HERO ───────────────── */
+
+.hero{
+  min-height:100svh;
+
+  display:flex;
+  align-items:center;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 80% 20%, rgba(201,169,110,0.08), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(201,169,110,0.05), transparent 35%);
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+
+  background-size:80px 80px;
+
+  mask-image:radial-gradient(circle at center, black 30%, transparent 80%);
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+
+  width:min(1000px,100%);
+}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.7rem;
+
+  padding:.7rem 1rem;
+
+  border:1px solid rgba(201,169,110,0.18);
+
+  background:rgba(201,169,110,0.06);
+
+  border-radius:999px;
+
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.62rem;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  margin-bottom:2rem;
+}
+
+.hero-badge::before{
+  content:'';
+
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:var(--gold);
+}
+
+.hero-title{
+  font-family:'Bebas Neue',sans-serif;
+
+  font-size:clamp(5rem,15vw,11rem);
+
+  line-height:.88;
+
+  letter-spacing:.02em;
+
+  margin-bottom:2rem;
+}
+
+.hero-title span{
+  display:block;
+
+  color:transparent;
+
+  -webkit-text-stroke:1px rgba(240,237,232,0.42);
+}
+
+.hero-desc{
+  max-width:720px;
+
+  font-size:1.05rem;
+
+  line-height:1.9;
+
+  color:var(--muted);
+
+  margin-bottom:2.8rem;
+}
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:1rem;
+}
+
+.meta-chip{
+  padding:.9rem 1.1rem;
+
+  border-radius:999px;
+
+  border:1px solid var(--border);
+
+  background:rgba(255,255,255,0.02);
+
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.62rem;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  color:var(--soft);
+}
+/* ── CUSTOM CURSOR ── */
+* { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2L4 18L8.5 13.5L12 22L14.5 21L11 12.5L18 12.5Z' fill='%23c9a96e' stroke='%23080808' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto !important; }
+a, button, .proj-card, .sc-card, .tech-item, .exp-card { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24'%3E%3Cpath d='M4 2L4 18L8.5 13.5L12 22L14.5 21L11 12.5L18 12.5Z' fill='%23c9a96e' stroke='%23080808' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto !important; }
+
+
+/* ───────────────── TIMELINE ───────────────── */
+
+.timeline{
+  position:relative;
+
+  margin-top:4rem;
+}
+
+.timeline::before{
+  content:'';
+
+  position:absolute;
+
+  top:0;
+  bottom:0;
+  left:220px;
+
+  width:1px;
+
+  background:rgba(255,255,255,0.08);
+}
+
+.exp{
+  display:grid;
+
+  grid-template-columns:180px 1fr;
+
+  gap:4rem;
+
+  position:relative;
+
+  padding-bottom:5rem;
+}
+
+.exp-year{
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.72rem;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  padding-top:.3rem;
+}
+
+.exp-content{
+  position:relative;
+
+  padding-left:2rem;
+}
+
+.exp-content::before{
+  content:'';
+
+  position:absolute;
+
+  left:-9px;
+  top:.4rem;
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(201,169,110,0.3);
+
+  background:var(--bg);
+}
+
+.exp-role{
+  font-size:2rem;
+
+  font-weight:700;
+
+  margin-bottom:.4rem;
+}
+
+.exp-company{
+  font-size:.92rem;
+
+  color:var(--gold);
+
+  margin-bottom:1.3rem;
+}
+
+.exp-desc{
+  display:flex;
+  flex-direction:column;
+
+  gap:1rem;
+
+  color:var(--muted);
+
+  line-height:1.9;
+
+  font-size:.96rem;
+}
+
+/* ───────────────── PROJECTS ───────────────── */
+
+.projects-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:1.2rem;
+
+  margin-top:3rem;
+}
+
+.project-card{
+  padding:2rem;
+
+  border-radius:24px;
+
+  border:1px solid var(--border);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.015)
+    );
+
+  transition:
+    transform .35s cubic-bezier(.16,1,.3,1),
+    border-color .3s ease;
+}
+
+.project-card:hover{
+  transform:translateY(-5px);
+
+  border-color:rgba(201,169,110,0.24);
+}
+
+.project-tag{
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.58rem;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  margin-bottom:1rem;
+}
+
+.project-name{
+  font-size:1.3rem;
+
+  font-weight:700;
+
+  margin-bottom:1rem;
+}
+
+.project-desc{
+  font-size:.92rem;
+
+  line-height:1.8;
+
+  color:var(--muted);
+}
+
+/* ───────────────── SKILLS ───────────────── */
+
+.skills-wrap{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:1.2rem;
+
+  margin-top:3rem;
+}
+
+.skill-box{
+  border:1px solid var(--border);
+
+  border-radius:22px;
+
+  padding:2rem;
+
+  background:rgba(255,255,255,0.02);
+}
+
+.skill-title{
+  font-size:1.1rem;
+
+  font-weight:700;
+
+  margin-bottom:1.4rem;
+}
+
+.skill-items{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:.7rem;
+}
+
+.skill-chip{
+  padding:.7rem .9rem;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  font-size:.72rem;
+
+  color:var(--muted);
+}
+
+/* ───────────────── EDUCATION ───────────────── */
+
+.edu-card{
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  padding:2.5rem;
+
+  background:rgba(255,255,255,0.02);
+
+  margin-top:3rem;
+}
+
+.edu-item{
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+
+  padding:1.5rem 0;
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.edu-item:last-child{
+  border-bottom:none;
+}
+
+.edu-left h4{
+  font-size:1.1rem;
+
+  margin-bottom:.4rem;
+}
+
+.edu-left p{
+  color:var(--muted);
+
+  line-height:1.7;
+}
+
+.edu-year{
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.65rem;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  white-space:nowrap;
+}
+
+/* ───────────────── CONTACT ───────────────── */
+
+.contact{
+  text-align:center;
+}
+
+.contact-desc{
+  max-width:700px;
+
+  margin:0 auto 2.5rem;
+
+  color:var(--muted);
+
+  line-height:1.9;
+}
+
+.contact-actions{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+
+  flex-wrap:wrap;
+}
+
+.btn-gold,
+.btn-ghost{
+  padding:1rem 1.8rem;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-family:'JetBrains Mono', monospace;
+
+  font-size:.64rem;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.btn-gold{
+  background:var(--gold);
+
+  color:#080808;
+
+  font-weight:700;
+}
+
+.btn-ghost{
+  border:1px solid var(--border);
+
+  color:var(--white);
+
+  background:rgba(255,255,255,0.02);
+}
+
+/* ───────────────── FOOTER ───────────────── */
+
+footer{
+  padding:3rem 0;
+
+  border-top:1px solid rgba(255,255,255,0.04);
+
+  text-align:center;
+
+  color:var(--soft);
+
+  font-size:.82rem;
+}
+
+/* ───────────────── RESPONSIVE ───────────────── */
+
+@media (max-width:980px){
+
+  .projects-grid,
+  .skills-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .timeline::before{
+    left:8px;
+  }
+
+  .exp{
+    grid-template-columns:1fr;
+
+    gap:1rem;
+  }
+
+  .exp-content{
+    padding-left:2rem;
+  }
+
+  .hero-desc{
+    font-size:.95rem;
+  }
+}
+
+@media (max-width:768px){
+
+  .sec{
+    padding:6rem 0;
+  }
+
+  .hero{
+    padding-top:8rem;
+    padding-bottom:5rem;
+  }
+
+  .hero-title{
+    font-size:5rem;
+  }
+
+  .hero-desc{
+    font-size:.92rem;
+
+    line-height:1.8;
+  }
+
+  .section-title{
+    font-size:3.4rem;
+  }
+
+  .edu-item{
+    flex-direction:column;
+  }
+
+  .nav-right{
+    gap:.6rem;
+  }
+
+  .nav-btn{
+    padding:.8rem 1.2rem;
+
+    font-size:.55rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <div class="nav-inner">
+
+    <a href="index.html" class="logo">
+      R.R
+    </a>
+
+    <div class="nav-right">
+
+      <a href="index.html" class="nav-link">
+        Portfolio
+      </a>
+
+      <a href="assets/Rukesh_Boddeti_Resume.pdf"
+         target="_blank"
+         class="nav-btn">
+         Download PDF
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-grid"></div>
+
+  <div class="container">
+
+    <div class="hero-inner">
+
+      <div class="hero-badge">
+        Currently at TCS
+      </div>
+
+      <h1 class="hero-title">
+        RUKESH
+        <span>BODDETI</span>
+      </h1>
+
+      <p class="hero-desc">
+        Frontend Engineer at Tata Consultancy Services focused on building immersive,
+        performant, and scalable digital experiences with Angular, TypeScript,
+        modern frontend systems, and thoughtful UI engineering.
+      </p>
+
+      <div class="hero-meta">
+
+        <div class="meta-chip">
+          Angular
+        </div>
+
+        <div class="meta-chip">
+          React
+        </div>
+
+        <div class="meta-chip">
+          TypeScript
+        </div>
+
+        <div class="meta-chip">
+          UI Engineering
+        </div>
+
+        <div class="meta-chip">
+          Hyderabad, India
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="sec">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Experience
+    </div>
+
+    <h2 class="section-title">
+      Professional Journey
+    </h2>
+
+    <div class="timeline">
+
+      <!-- TCS -->
+
+      <div class="exp">
+
+        <div class="exp-year">
+          2025 — Present
+        </div>
+
+        <div class="exp-content">
+
+          <h3 class="exp-role">
+            Frontend Engineer
+          </h3>
+
+          <div class="exp-company">
+            Tata Consultancy Services · ICICI iLens
+          </div>
+
+          <div class="exp-desc">
+
+            <p>
+              Developing and maintaining enterprise frontend modules using Angular,
+              TypeScript, and scalable UI architecture across multiple loan-processing workflows.
+            </p>
+
+            <p>
+              Implementing client-requested enhancements, API integrations,
+              UI improvements, and performance optimizations in Agile delivery environments.
+            </p>
+
+            <p>
+              Collaborating closely with backend engineers, QA teams,
+              and stakeholders to deliver production-ready financial applications.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Freelance -->
+
+      <div class="exp">
+
+        <div class="exp-year">
+          2023 — 2024
+        </div>
+
+        <div class="exp-content">
+
+          <h3 class="exp-role">
+            UI Designer & Frontend Developer
+          </h3>
+
+          <div class="exp-company">
+            Freelance · Remote
+          </div>
+
+          <div class="exp-desc">
+
+            <p>
+              Designed and developed responsive digital interfaces
+              focused on usability, visual clarity, and interaction quality.
+            </p>
+
+            <p>
+              Created wireframes, prototypes, and scalable frontend experiences
+              using Figma, HTML, CSS, JavaScript, and modern UI practices.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="sec">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Selected Work
+    </div>
+
+    <h2 class="section-title">
+      Featured Projects
+    </h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+
+        <div class="project-tag">
+          AI Platform
+        </div>
+
+        <div class="project-name">
+          RR Career AI
+        </div>
+
+        <div class="project-desc">
+          AI-powered career guidance platform with skill-gap analysis,
+          personalized roadmaps, AI risk insights, and career comparison systems.
+        </div>
+
+      </div>
+
+      <div class="project-card">
+
+        <div class="project-tag">
+          Enterprise Application
+        </div>
+
+        <div class="project-name">
+          Employee Resource Management
+        </div>
+
+        <div class="project-desc">
+          Spring Boot + Angular web application for employee management,
+          attendance tracking, authentication, audit logging,
+          and project allocation workflows.
+        </div>
+
+      </div>
+
+      <div class="project-card">
+
+        <div class="project-tag">
+          AI Trip Planner
+        </div>
+
+        <div class="project-name">
+          Trip Thrive AI
+        </div>
+
+        <div class="project-desc">
+          Collaborative AI-based travel planning platform delivering
+          personalized itineraries based on destination, budget,
+          duration, and user preferences.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="sec">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Technical Expertise
+    </div>
+
+    <h2 class="section-title">
+      Skills & Technologies
+    </h2>
+
+    <div class="skills-wrap">
+
+      <div class="skill-box">
+
+        <div class="skill-title">
+          Frontend
+        </div>
+
+        <div class="skill-items">
+
+          <div class="skill-chip">Angular</div>
+          <div class="skill-chip">React</div>
+          <div class="skill-chip">TypeScript</div>
+          <div class="skill-chip">JavaScript</div>
+          <div class="skill-chip">HTML</div>
+          <div class="skill-chip">CSS</div>
+          <div class="skill-chip">Bootstrap</div>
+
+        </div>
+
+      </div>
+
+      <div class="skill-box">
+
+        <div class="skill-title">
+          Backend & Systems
+        </div>
+
+        <div class="skill-items">
+
+          <div class="skill-chip">Spring Boot</div>
+          <div class="skill-chip">REST APIs</div>
+          <div class="skill-chip">SQL</div>
+          <div class="skill-chip">MongoDB</div>
+          <div class="skill-chip">Java</div>
+          <div class="skill-chip">Python</div>
+
+        </div>
+
+      </div>
+
+      <div class="skill-box">
+
+        <div class="skill-title">
+          Design & Product
+        </div>
+
+        <div class="skill-items">
+
+          <div class="skill-chip">Figma</div>
+          <div class="skill-chip">UI Systems</div>
+          <div class="skill-chip">Wireframing</div>
+          <div class="skill-chip">Prototyping</div>
+          <div class="skill-chip">UX Thinking</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="sec">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Education
+    </div>
+
+    <h2 class="section-title">
+      Academic Background
+    </h2>
+
+    <div class="edu-card">
+
+      <div class="edu-item">
+
+        <div class="edu-left">
+
+          <h4>
+            Vignan's Institute of Information Technology
+          </h4>
+
+          <p>
+            B.Tech in Computer Science & Engineering
+          </p>
+
+        </div>
+
+        <div class="edu-year">
+          2020 — 2024
+        </div>
+
+      </div>
+
+      <div class="edu-item">
+
+        <div class="edu-left">
+
+          <h4>
+            Narayana Junior College
+          </h4>
+
+          <p>
+            MPC · Board of Intermediate Education
+          </p>
+
+        </div>
+
+        <div class="edu-year">
+          2018 — 2020
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="sec contact">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Contact
+    </div>
+
+    <h2 class="section-title">
+      Let's Build Something Great
+    </h2>
+
+    <p class="contact-desc">
+      Open to frontend engineering opportunities,
+      product-focused teams, and impactful digital experiences.
+    </p>
+
+    <div class="contact-actions">
+
+      <a href="mailto:rukeshraj.boddeti@gmail.com"
+         class="btn-gold">
+         Email Me
+      </a>
+
+      <a href="assets/Rukesh_Boddeti_Resume.pdf"
+         target="_blank"
+         class="btn-ghost">
+         Download Resume
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Rukesh Boddeti — Frontend Engineer
+</footer>
+
+</body>
+</html>
